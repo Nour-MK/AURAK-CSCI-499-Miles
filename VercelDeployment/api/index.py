@@ -17,8 +17,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-with open(json_file_path) as f:
-    travel_db = json.load(f)
+try:
+    with open(json_file_path) as f:
+        travel_db = json.load(f)
+except Exception as e:
+    travel_db = {}
+    print(f"Error loading travel_db.json: {e}")
 
 # Global variables to store user preferences
 user_name = None
