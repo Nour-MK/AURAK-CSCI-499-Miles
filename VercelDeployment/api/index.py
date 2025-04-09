@@ -2,7 +2,6 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import json
 import random  # Import the random module
-from mangum import Mangum
 import os
 
 # Get the absolute path to the JSON file
@@ -312,5 +311,3 @@ async def chat_endpoint(request: Request):
             "I'm not sure about that, but feel free to ask me something else!"
         ]
         return {"response": random.choice(responses)}
-
-handler = Mangum(app)
