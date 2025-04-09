@@ -3,6 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 import json
 import random  # Import the random module
 from mangum import Mangum
+import os
+
+# Get the absolute path to the JSON file
+json_file_path = os.path.join(os.path.dirname(__file__), "travel_db.json")
 
 app = FastAPI()
 
@@ -13,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-with open("travel_db.json") as f:
+with open(json_file_path) as f:
     travel_db = json.load(f)
 
 # Global variables to store user preferences
