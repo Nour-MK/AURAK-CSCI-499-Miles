@@ -10,7 +10,7 @@ json_file_path = os.path.join(os.path.dirname(__file__), "travel_db.json")
 
 app = FastAPI()
 
-# Serve the static files (e.g., index.html) from the root directory
+# Serve the static files (e.g., index.html, icon.png) from the root directory
 app.mount("/", StaticFiles(directory=".", html=True), name="static")
 
 app.add_middleware(
