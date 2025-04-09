@@ -34,7 +34,7 @@ user_budget = None
 repeat_counter = 0
 previous_suggestions = set()
 
-@app.post("/api/chat")
+@app.post("/chat")
 async def chat_endpoint(request: Request):
     global user_name, user_type, user_budget, previous_suggestions, repeat_counter  # Access global variables
     data = await request.json()
