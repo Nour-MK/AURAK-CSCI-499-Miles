@@ -4,7 +4,6 @@ import json
 import random  # Import the random module
 from mangum import Mangum
 
-handler = Mangum(app)
 app = FastAPI()
 
 app.add_middleware(
@@ -305,3 +304,5 @@ async def chat_endpoint(request: Request):
             "I'm not sure about that, but feel free to ask me something else!"
         ]
         return {"response": random.choice(responses)}
+
+handler = Mangum(app)
