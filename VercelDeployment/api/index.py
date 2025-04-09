@@ -30,6 +30,10 @@ user_budget = None
 repeat_counter = 0
 previous_suggestions = set()
 
+@app.get("/")
+async def root():
+    return {"message": "FastAPI is running!"}
+
 @app.post("/chat")
 async def chat_endpoint(request: Request):
     global user_name, user_type, user_budget, previous_suggestions, repeat_counter  # Access global variables
