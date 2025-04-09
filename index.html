@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miles</title>
+  <link rel="icon" type="image/png" href="icon.png" /> 
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    #title {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 50px; /* Adjust font size */
+    font-weight: bold;
+    color: black;
+    font-family: 'Baloo 2', 'Poppins', sans-serif; /* Modern bubbly font */
+    z-index: 20; /* Ensure it stays above other elements */
+  }
+    #chat-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      pointer-events: none; /* Allow mouse events to pass through */
+      z-index: 10; /* Visually place the chat container above the Spline background */
+    }
+    #chat-box {
+      display: flex;
+      flex-direction: column-reverse; /* Reverse the order of messages */
+      justify-content: flex-start; /* Start adding messages from the bottom */
+      flex: 1;
+      max-height: 55%; /* Limit the height to 50% of the screen */
+      overflow-y: auto; /* Allow scrolling for older messages */
+      padding-right: 10px; /* Add padding for scrollbar */
+      mask-image: linear-gradient(to top, black 100%, transparent 0%); /* Fade-out effect only at the top */
+      -webkit-mask-image: linear-gradient(to top, black 100%, transparent 0%); /* For Safari */
+      mask-size: 100% 200%; /* Ensure the fade-out effect is only at the top */
+      -webkit-mask-size: 100% 200%; /* For Safari */
+      mask-position: top; /* Position the fade-out effect at the top */
+      -webkit-mask-position: top; /* For Safari */
+      pointer-events: auto; /* Allow interaction with the scrollbar */
+      scrollbar-width: thin; /* For Firefox */
+      scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* For Firefox */
+    }
+    /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+    #chat-box::-webkit-scrollbar {
+      width: 8px;
+    }
+    #chat-box::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #chat-box::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+    .message {
+      background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+      border-radius: 20px;
+      padding: 10px 15px;
+      margin: 10px;
+      max-width: 40%; /* Changed from 60% to 40% */
+      align-self: flex-start;
+      backdrop-filter: blur(10px); /* Glassy effect */
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
+      margin-left: 0px; /* Add space between the chatbot's messages and the left edge */
+    }
+    .user-message {
+      background-color: rgba(37, 44, 46, 0.3); /* Semi-transparent light blue */
+      align-self: flex-end;
+      margin-right: 20px; /* Add space between the message and the edge of the screen */
+      margin-left: auto; /* Ensure the user's messages align to the right */
+    }
+    #input-container {
+      display: flex;
+      gap: 10px;
+      pointer-events: auto; /* Allow interaction with input fields and buttons */
+      margin: 20px auto; /* Center the input container horizontally */
+      width: 60%; /* Set a comfortable width for the input container */
+      max-width: 800px; /* Limit the maximum width */
+      min-width: 300px; /* Set a minimum width for smaller screens */
+      position: relative; /* Ensure it can be positioned */
+      bottom: 20px; /* Raise the typing bar up by 20px */
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    spline-viewer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+      z-index: 0; /* Keep the Spline background below the chat container */
+      pointer-events: auto; /* Ensure it can receive mouse events */
+    }
+    #burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 30; /* Ensure it stays above other elements */
+    color: black;
+  }
+
+  /* Sidebar */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px; /* Move it completely off-screen (adjust based on sidebar width) */
+    width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    z-index: 25; /* Ensure it stays above the chat container */
+    display: flex; /* Enable Flexbox */
+    align-items: flex-start; /* Align content to the left */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: left; /* Ensure text is left-aligned */
+  }
+
+  #sidebar p {
+    margin: 15px 0;
+    font-family: 'Baloo 2', 'Poppins', sans-serif; /* Use the same font as the title */
+    font-size: 16px;
+    font-weight: normal; /* Ensure the text is not bold */
+    color: white; /* Keep the text color white for readability */
+  }
+
+  /* Sidebar visible state */
+  #sidebar.open {
+    right: 0; /* Slide in the sidebar */
+  }
+  #show-credits-btn {
+    display: block;
+    margin: 20px auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #show-credits-btn:hover {
+    background-color: #f0f0f0; /* Slightly darker background on hover */
+  }
+  </style>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+</head>
+<body>
+  <spline-viewer url="https://prod.spline.design/qIx5fKYlHyoNJE5z/scene.splinecode"></spline-viewer>
+  <div id="chat-container">
+    <div id="title">Miles</div> <!-- Add the title here -->
+    <div id="chat-box"></div>
+    <div id="input-container">
+      <input type="text" id="user-input" placeholder="Ask me about your next trip..." onkeydown="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <div id="burger-menu" onclick="toggleSidebar()">☰</div> <!-- Burger menu icon -->
+<div id="sidebar">
+  <p>Hello there! My name is Miles, your friendly travel planning assistant. 🌍✈️. Whether you're looking for breathtaking beach destinations, vibrant city adventures, or serene mountain escapes, I've got you covered. I can help you plan your trip by suggesting destinations within budget considerations, recommending hotels, and even suggesting fun activities to make your journey unforgettable.</p>
+  <p>Just type in your questions or travel preferences, and I'll do my best to assist you. Let's start planning your next adventure together!</p>
+  <button id="show-credits-btn" onclick="showCredits()">Show Credits</button>
+</div>
+
+<script>
+  // Add event listener to close sidebar when clicking outside
+  document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById('sidebar');
+    const burgerMenu = document.getElementById('burger-menu');
+    
+    // Check if sidebar is open and the click is outside the sidebar and not on the burger menu
+    if (sidebar.classList.contains('open') && 
+        !sidebar.contains(event.target) && 
+        event.target !== burgerMenu) {
+      sidebar.classList.remove('open');
+    }
+  });
+  
+  async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    addMessage(msg, true);
+
+    const res = await fetch("http://127.0.0.1:8000/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: msg })
+    });
+    const data = await res.json();
+    addMessage(data.response, false);
+    input.value = "";
+  }
+
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+
+  function addMessage(text, isUser) {
+    const chatBox = document.getElementById("chat-box");
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message");
+    if (isUser) {
+      msgDiv.classList.add("user-message");
+    }
+    msgDiv.innerText = text;
+    chatBox.prepend(msgDiv); // Add the message to the top of the reversed container
+
+    applyFadeEffect(); // Apply fade-out effect to chat bubbles
+    chatBox.scrollTop = 0; // Scroll to show the newest message
+  }
+
+  function applyFadeEffect() {
+    const chatBox = document.getElementById("chat-box");
+    const messages = chatBox.querySelectorAll(".message");
+    const chatBoxHeight = chatBox.offsetHeight;
+
+    messages.forEach((message) => {
+      const messageTop = message.getBoundingClientRect().top - chatBox.getBoundingClientRect().top;
+
+      if (messageTop <= chatBoxHeight * 0.25) {
+        // Apply fade-out effect if the message is within the top 45% of the chatbox
+        message.style.opacity = Math.max(0, 1 - (chatBoxHeight * 0.25 - messageTop) / (chatBoxHeight * 0.1));
+      } else {
+        // Reset opacity for messages outside the fade-out zone
+        message.style.opacity = 1;
+      }
+    });
+  }
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const isOpen = sidebar.classList.contains("open");
+
+    if (!isOpen) {
+      // Reset the sidebar content to the initial state
+      sidebar.innerHTML = `
+        <p>Hello there! My name is Miles, your friendly travel planning assistant. 🌍✈️</p>
+        <p>Whether you're looking for breathtaking beach destinations, vibrant city adventures, or serene mountain escapes, I've got you covered. I can help you plan your trip by suggesting destinations within budget considerations, recommending hotels, and even suggesting fun activities to make your journey unforgettable.</p>
+        <p>Just type in your questions or travel preferences, and I'll do my best to assist you. Let's start planning your next adventure together!</p>
+        <button id="show-credits-btn" onclick="showCredits()">Show Credits</button>
+      `;
+    }
+
+    // Toggle the "open" class to show or hide the sidebar
+    sidebar.classList.toggle("open");
+    
+    // Prevent the click event from propagating to the document
+    event.stopPropagation();
+  }
+
+  function showCredits() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.innerHTML = `
+      <p>
+        A Special Topics in Computing Project<br><br>
+        Nour Mostafa, 2021004938, BSc. in CE<br>
+        Anas Bendaoud, 2021004799, BSc. in CS<br>
+        Youssef Moustafa, 2021004801, BSc. in CE<br>
+        Dema Al-sos, 2021004885, BSc. in CE<br><br>
+        Supervised by Dr. Arfan Ghani,<br>
+        The American University of Ras Al Khaimah
+      </p>
+    `;
+    
+    // Prevent the click event from propagating to the document
+    event.stopPropagation();
+  }
+  
+  // Add event listener to stop propagation for clicks inside the sidebar
+  document.getElementById("sidebar").addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+  
+  // Add a scroll event listener to apply the fade-out effect dynamically
+  document.getElementById("chat-box").addEventListener("scroll", applyFadeEffect);
+</script>
+</body>
+</html>

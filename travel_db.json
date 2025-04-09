@@ -1,0 +1,508 @@
+{
+  "beach": [
+    {
+      "location": "Maldives",
+      "flight": "Approx 1835 AED round trip",
+      "hotel": "Water Bungalow - 734 AED/night",
+      "activities": ["Snorkeling", "Sunset cruise", "Spa day"]
+    },
+    {
+      "location": "Bora Bora, French Polynesia",
+      "flight": "Approx 5505 AED round trip",
+      "hotel": "Overwater Villa - 1468 AED/night",
+      "activities": ["Lagoon tours", "Scuba diving", "Polynesian dance shows"]
+    }
+  ],
+  "city": [
+    {
+      "location": "Tokyo",
+      "flight": "Approx 2753 AED round trip",
+      "hotel": "City View Inn - 440 AED/night",
+      "activities": ["Shibuya Crossing", "Sushi tour", "Tech museums"]
+    },
+    {
+      "location": "New York City, USA",
+      "flight": "Approx 3670 AED round trip",
+      "hotel": "Times Square Hotel - 734 AED/night",
+      "activities": ["Broadway shows", "Central Park", "Statue of Liberty"]
+    }
+  ],
+  "mountain": [
+    {
+      "location": "Swiss Alps",
+      "flight": "Approx 2202 AED round trip",
+      "hotel": "Chalet CozyStay - 550 AED/night",
+      "activities": ["Hiking", "Skiing", "Scenic train ride"]
+    },
+    {
+      "location": "Rocky Mountains, Canada",
+      "flight": "Approx 2570 AED round trip",
+      "hotel": "Mountain Lodge - 661 AED/night",
+      "activities": ["Wildlife spotting", "Lake canoeing", "Hiking trails"]
+    },
+    {
+      "location": "Himalayas, Nepal",
+      "flight": "Approx 3303 AED round trip",
+      "hotel": "Everest Base Camp Lodge - 734 AED/night",
+      "activities": ["Trekking", "Mountain climbing", "Cultural tours"]
+    },
+    {
+      "location": "Andes Mountains, Peru",
+      "flight": "Approx 3670 AED round trip",
+      "hotel": "Cusco Mountain Retreat - 550 AED/night",
+      "activities": ["Machu Picchu tours", "Hiking", "Photography"]
+    }
+  ],
+"desert": [
+  {
+    "location": "Sahara Desert",
+    "flight": "Approx 1468 AED round trip",
+    "hotel": "Desert Camp - 367 AED/night",
+    "activities": ["Camel riding", "Stargazing", "Sandboarding"]
+  },
+  {
+    "location": "Wadi Rum, Jordan",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Bedouin Camp - 440 AED/night",
+    "activities": ["Jeep tours", "Desert hiking", "Hot air balloon rides"]
+  },
+  {
+    "location": "Atacama Desert, Chile",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Desert Oasis Lodge - 734 AED/night",
+    "activities": ["Stargazing", "Salt flats tour", "Geyser exploration"]
+  }
+],
+"adventure": [
+  {
+    "location": "Queenstown, New Zealand",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Adventure Lodge - 661 AED/night",
+    "activities": ["Bungee jumping", "Skydiving", "Jet boating"]
+  },
+  {
+    "location": "Interlaken, Switzerland",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Adventure Chalet - 550 AED/night",
+    "activities": ["Paragliding", "Canyoning", "Skydiving"]
+  },
+  {
+    "location": "Victoria Falls, Zambia",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Safari Adventure Lodge - 734 AED/night",
+    "activities": ["White-water rafting", "Helicopter tours", "Bungee jumping"]
+  }
+],
+"cultural": [
+  {
+    "location": "Kyoto, Japan",
+    "flight": "Approx 2936 AED round trip",
+    "hotel": "Traditional Ryokan - 550 AED/night",
+    "activities": ["Temple visits", "Tea ceremonies", "Geisha district tour"]
+  },
+  {
+    "location": "Marrakech, Morocco",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Riad Stay - 440 AED/night",
+    "activities": ["Souk shopping", "Hammam spa", "Historical palace tours"]
+  },
+  {
+    "location": "Varanasi, India",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Ashram Stay - 183 AED/night",
+    "activities": ["Ganges River rituals", "Meditation sessions", "Temple visits"]
+  }
+],
+  "wildlife": [
+  {
+    "location": "Serengeti, Tanzania",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Safari Lodge - 1101 AED/night",
+    "activities": ["Game drives", "Hot air balloon safari", "Bird watching"]
+  },
+  {
+    "location": "Kruger National Park, South Africa",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Bushveld Lodge - 734 AED/night",
+    "activities": ["Big Five safari", "Nature walks", "Photography"]
+  },
+  {
+    "location": "Amazon Rainforest, Brazil",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Jungle Eco Lodge - 550 AED/night",
+    "activities": ["Wildlife spotting", "River cruises", "Canopy tours"]
+  }
+],
+"island": [
+  {
+    "location": "Bora Bora, French Polynesia",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Overwater Villa - 1468 AED/night",
+    "activities": ["Lagoon tours", "Scuba diving", "Polynesian dance shows"]
+  },
+  {
+    "location": "Maldives",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Water Bungalow - 734 AED/night",
+    "activities": ["Snorkeling", "Sunset cruise", "Spa day"]
+  },
+  {
+    "location": "Santorini, Greece",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Cliffside Villa - 918 AED/night",
+    "activities": ["Volcano tours", "Wine tasting", "Beach relaxation"]
+  }
+],
+"historical": [
+  {
+    "location": "Rome, Italy",
+    "flight": "Approx 2570 AED round trip",
+    "hotel": "Boutique Hotel - 477 AED/night",
+    "activities": ["Colosseum tour", "Vatican City visit", "Roman Forum exploration"]
+  },
+  {
+    "location": "Athens, Greece",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Acropolis View Hotel - 550 AED/night",
+    "activities": ["Acropolis tour", "Ancient Agora", "National Archaeological Museum"]
+  },
+  {
+    "location": "Cairo, Egypt",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Pyramid View Inn - 367 AED/night",
+    "activities": ["Pyramids of Giza", "Sphinx visit", "Egyptian Museum"]
+  }
+],
+"cruise": [
+  {
+    "location": "Caribbean Islands",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Cruise Ship Cabin - 918 AED/night",
+    "activities": ["Island hopping", "Onboard entertainment", "Snorkeling excursions"]
+  },
+  {
+    "location": "Mediterranean Sea",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Luxury Cruise Suite - 1101 AED/night",
+    "activities": ["Coastal city tours", "Fine dining", "Beach excursions"]
+  },
+  {
+    "location": "Alaskan Coast, USA",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Glacier Cruise Cabin - 734 AED/night",
+    "activities": ["Glacier viewing", "Whale watching", "Nature photography"]
+  }
+],
+"luxury": [
+  {
+    "location": "Dubai, UAE",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Burj Al Arab - 3670 AED/night",
+    "activities": ["Shopping", "Desert safari", "Helicopter tour"]
+  },
+  {
+    "location": "Maldives",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Luxury Water Villa - 1835 AED/night",
+    "activities": ["Private snorkeling tours", "Spa treatments", "Sunset cruises"]
+  },
+  {
+    "location": "Monaco",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Monte Carlo Resort - 2202 AED/night",
+    "activities": ["Casino visits", "Luxury yacht tours", "Fine dining"]
+  }
+],
+"nature": [
+  {
+    "location": "Banff National Park, Canada",
+    "flight": "Approx 2570 AED round trip",
+    "hotel": "Mountain Lodge - 661 AED/night",
+    "activities": ["Lake Louise canoeing", "Wildlife spotting", "Hiking trails"]
+  },
+  {
+    "location": "Yellowstone National Park, USA",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Parkside Cabin - 550 AED/night",
+    "activities": ["Geyser tours", "Wildlife photography", "Nature walks"]
+  },
+  {
+    "location": "Fiordland National Park, New Zealand",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Lakeside Retreat - 734 AED/night",
+    "activities": ["Milford Sound cruises", "Hiking", "Kayaking"]
+  }
+],
+"romantic": [
+  {
+    "location": "Paris, France",
+    "flight": "Approx 2936 AED round trip",
+    "hotel": "Eiffel Tower View Hotel - 918 AED/night",
+    "activities": ["Seine River cruise", "Eiffel Tower dinner", "Louvre Museum visit"]
+  },
+  {
+    "location": "Venice, Italy",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Canal View Hotel - 734 AED/night",
+    "activities": ["Gondola rides", "Romantic dinners", "St. Mark's Basilica tours"]
+  },
+  {
+    "location": "Santorini, Greece",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Cliffside Villa - 918 AED/night",
+    "activities": ["Sunset views", "Sight seeing", "Beach relaxation"]
+  }
+],
+"family": [
+  {
+    "location": "Orlando, Florida, USA",
+    "flight": "Approx 1468 AED round trip",
+    "hotel": "Resort Hotel - 550 AED/night",
+    "activities": ["Disney World", "Universal Studios", "Water parks"]
+  },
+  {
+    "location": "Tokyo, Japan",
+    "flight": "Approx 2753 AED round trip",
+    "hotel": "Family Inn - 440 AED/night",
+    "activities": ["Tokyo Disneyland", "Ueno Zoo", "Interactive museums"]
+  },
+  {
+    "location": "Gold Coast, Australia",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Beachside Resort - 734 AED/night",
+    "activities": ["Theme parks", "Beach activities", "Wildlife sanctuaries"]
+  }
+],
+"winter": [
+  {
+    "location": "Reykjavik, Iceland",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Cozy Cabin - 734 AED/night",
+    "activities": ["Northern Lights tour", "Blue Lagoon spa", "Glacier hiking"]
+  },
+  {
+    "location": "Zermatt, Switzerland",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Ski Resort Chalet - 1101 AED/night",
+    "activities": ["Skiing", "Snowboarding", "Matterhorn views"]
+  },
+  {
+    "location": "Lapland, Finland",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Glass Igloo - 1468 AED/night",
+    "activities": ["Reindeer sleigh rides", "Aurora Borealis viewing", "Snowmobiling"]
+  }
+],
+"tropical": [
+  {
+    "location": "Bali, Indonesia",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Beachfront Villa - 440 AED/night",
+    "activities": ["Surfing", "Temple visits", "Jungle trekking"]
+  },
+  {
+    "location": "Phuket, Thailand",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Seaside Resort - 550 AED/night",
+    "activities": ["Island hopping", "Snorkeling", "Thai cooking classes"]
+  },
+  {
+    "location": "Fiji Islands",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Overwater Bungalow - 1468 AED/night",
+    "activities": ["Scuba diving", "Beach relaxation", "Cultural performances"]
+  }
+],
+"eco": [
+  {
+    "location": "Costa Rica",
+    "flight": "Approx 2570 AED round trip",
+    "hotel": "Eco Lodge - 367 AED/night",
+    "activities": ["Rainforest tours", "Zip-lining", "Wildlife conservation centers"]
+  },
+  {
+    "location": "Galápagos Islands, Ecuador",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Eco-Friendly Retreat - 734 AED/night",
+    "activities": ["Wildlife spotting", "Snorkeling with sea lions", "Nature hikes"]
+  },
+  {
+    "location": "Amazon Rainforest, Peru",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Jungle Lodge - 550 AED/night",
+    "activities": ["Canopy walks", "Riverboat tours", "Bird watching"]
+  }
+],
+"foodie": [
+  {
+    "location": "Lyon, France",
+    "flight": "Approx 3120 AED round trip",
+    "hotel": "Gourmet Hotel - 734 AED/night",
+    "activities": ["Wine tasting", "Michelin-star dining", "Cooking classes"]
+  },
+  {
+    "location": "Tokyo, Japan",
+    "flight": "Approx 2753 AED round trip",
+    "hotel": "Sushi Inn - 550 AED/night",
+    "activities": ["Sushi-making classes", "Street food tours", "Fine dining"]
+  },
+  {
+    "location": "Bangkok, Thailand",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Foodie Paradise Hotel - 440 AED/night",
+    "activities": ["Floating market tours", "Thai cooking classes", "Street food exploration"]
+  }
+],
+"spiritual": [
+  {
+    "location": "Varanasi, India",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Ashram Stay - 183 AED/night",
+    "activities": ["Ganges River rituals", "Meditation sessions", "Temple visits"]
+  },
+  {
+    "location": "Kyoto, Japan",
+    "flight": "Approx 2936 AED round trip",
+    "hotel": "Zen Retreat - 550 AED/night",
+    "activities": ["Zen garden tours", "Tea ceremonies", "Temple meditation"]
+  },
+  {
+    "location": "Bali, Indonesia",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Spiritual Haven - 367 AED/night",
+    "activities": ["Yoga retreats", "Temple visits", "Healing workshops"]
+  },
+  {
+    "location": "Sheikh Zayed Grand Mosque, UAE",
+    "flight": "Approx 734 AED round trip",
+    "hotel": "Luxury City Hotel - 1101 AED/night",
+    "activities": ["Mosque tour", "Cultural insights", "Photography"]
+  }
+], 
+"wellness": [
+  {
+    "location": "Ubud, Bali, Indonesia",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Wellness Retreat - 550 AED/night",
+    "activities": ["Yoga classes", "Meditation workshops", "Spa treatments"]
+  },
+  {
+    "location": "Sedona, Arizona, USA",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Healing Resort - 734 AED/night",
+    "activities": ["Energy vortex tours", "Hiking", "Sound healing sessions"]
+  },
+  {
+    "location": "Goa, India",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Ayurvedic Spa Resort - 440 AED/night",
+    "activities": ["Ayurvedic treatments", "Beach yoga", "Meditation retreats"]
+  }
+], 
+"festivals": [
+  {
+    "location": "Rio de Janeiro, Brazil",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Carnival Hotel - 734 AED/night",
+    "activities": ["Carnival parades", "Samba dancing", "Street parties"]
+  },
+  {
+    "location": "Munich, Germany",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Oktoberfest Inn - 550 AED/night",
+    "activities": ["Beer tents", "Traditional Bavarian food", "Folk music"]
+  },
+  {
+    "location": "Venice, Italy",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Carnival Stay - 734 AED/night",
+    "activities": ["Mask-making workshops", "Costume parades", "Canal tours"]
+  }
+], 
+"safaris": [
+  {
+    "location": "Masai Mara, Kenya",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Safari Camp - 1101 AED/night",
+    "activities": ["Game drives", "Hot air balloon safari", "Cultural village visits"]
+  },
+  {
+    "location": "Chobe National Park, Botswana",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Riverfront Lodge - 734 AED/night",
+    "activities": ["Boat safaris", "Elephant spotting", "Photography tours"]
+  },
+  {
+    "location": "Yala National Park, Sri Lanka",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Jungle Retreat - 550 AED/night",
+    "activities": ["Leopard safaris", "Bird watching", "Nature walks"]
+  }
+],
+"honeymoon": [
+  {
+    "location": "Maldives",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Overwater Villa - 1835 AED/night",
+    "activities": ["Private dinners", "Couples spa", "Sunset cruises"]
+  },
+  {
+    "location": "Santorini, Greece",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Cliffside Villa - 918 AED/night",
+    "activities": ["Wine tasting", "Sunset views", "Beach relaxation"]
+  },
+  {
+    "location": "Bora Bora, French Polynesia",
+    "flight": "Approx 5505 AED round trip",
+    "hotel": "Luxury Bungalow - 1468 AED/night",
+    "activities": ["Lagoon tours", "Scuba diving", "Polynesian dance shows"]
+  }
+], 
+"road trip": [
+  {
+    "location": "Pacific Coast Highway, USA",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Coastal Motel - 550 AED/night",
+    "activities": ["Scenic drives", "Beach stops", "Hiking"]
+  },
+  {
+    "location": "Great Ocean Road, Australia",
+    "flight": "Approx 3670 AED round trip",
+    "hotel": "Seaside Lodge - 734 AED/night",
+    "activities": ["Twelve Apostles visit", "Wildlife spotting", "Surfing"]
+  },
+  {
+    "location": "Ring Road, Iceland",
+    "flight": "Approx 4404 AED round trip",
+    "hotel": "Countryside Cabin - 550 AED/night",
+    "activities": ["Waterfall visits", "Glacier tours", "Hot springs"]
+  }
+], 
+"medical": [
+  {
+    "location": "Istanbul, Turkey",
+    "flight": "Approx 2202 AED round trip",
+    "hotel": "Medical Stay Hotel - 550 AED/night",
+    "activities": ["Hair transplant clinics", "Cosmetic surgery centers", "Cultural tours"]
+  },
+  {
+    "location": "Bangkok, Thailand",
+    "flight": "Approx 1835 AED round trip",
+    "hotel": "Wellness Hotel - 440 AED/night",
+    "activities": ["Affordable dental care", "Cosmetic surgery", "Thai massages"]
+  },
+  {
+    "location": "Dubai, UAE",
+    "flight": "Approx 734 AED round trip",
+    "hotel": "Luxury Medical Suites - 1101 AED/night",
+    "activities": ["Veneers dentists", "Luxury spa treatments", "Shopping tours"]
+  },
+  {
+    "location": "Seoul, South Korea",
+    "flight": "Approx 3303 AED round trip",
+    "hotel": "Cosmetic Stay Hotel - 734 AED/night",
+    "activities": ["Plastic surgery clinics", "Skin care treatments", "K-beauty shopping"]
+  }
+]
+}
