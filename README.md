@@ -7,5 +7,5 @@
 Description coming soon!
 
 <p align="center">
-  <img src="report/screenshot1.png" style="width: 49%; height: 280px;"/> <img src="report/screenshot2.png" style="width: 49%; height: 280px;" />
+  <img src="report/screenshot1.png" style="width: 49%; height: 250px;"/> <img src="report/screenshot2.png" style="width: 49%; height: 250px;" />
 </p>
