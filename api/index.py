@@ -11,12 +11,12 @@ json_file_path = os.path.join(os.path.dirname(__file__), "travel_db.json")
 app = FastAPI()
 
 # Serve the static files (e.g., index.html, icon.png) from the root directory
-app.mount("/", StaticFiles(directory=".", html=True), name="static")
+app.mount("/static", StaticFiles(directory=".", html=True), name="static")
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -34,7 +34,7 @@ user_budget = None
 repeat_counter = 0
 previous_suggestions = set()
 
-@app.post("chat")
+@app.post("/chat")
 async def chat_endpoint(request: Request):
     global user_name, user_type, user_budget, previous_suggestions, repeat_counter  # Access global variables
     data = await request.json()
